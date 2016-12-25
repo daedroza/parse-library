@@ -3,19 +3,8 @@ function setup() {
 
 }
 
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-        if ((new Date().getTime() - start) > milliseconds) {
-        break;
-        }
-    }
-}
-
-
 var usercardID;
 /*var _userINFO = { useremailid: "" };
-
      $.ajax({
         url: "",
         type: 'POST',
@@ -29,7 +18,7 @@ var usercardID;
 });
 */
 
-for (i = 0; i < 2000; i++) {
+for (i = 1; i < 1000; i++) {
     var _cardID;
     if (i < 10) {
     _cardID = "";
@@ -43,17 +32,16 @@ for (i = 0; i < 2000; i++) {
     usercardID = _cardID + i;
     var userINFO = { id: usercardID };
 	    $.ajax({
-	        url: "",
+            url: "",
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify(userINFO),
             success: function(responseINFO) {
                 var str = JSON.stringify(responseINFO, null, 4);
-                document.write(str + "<br> <br> <br> <br> <br>");
+                document.write(str + "<br> <br>");
             }
         });
-    sleep(5000);
 }
 
 function draw() {

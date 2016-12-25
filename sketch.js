@@ -41,7 +41,6 @@ for (i = 0; i < 2000; i++) {
     _cardID = "";
     }
     usercardID = _cardID + i;
-    document.write(value + "<br>");
     var userINFO = { id: usercardID };
 	    $.ajax({
 	        url: "",
@@ -50,8 +49,6 @@ for (i = 0; i < 2000; i++) {
             contentType: 'application/json',
             data: JSON.stringify(userINFO),
             success: function(responseINFO) {
-                console.log(userINFO);
-                console.log(responseINFO);
                 var str = JSON.stringify(responseINFO, null, 4);
                 document.write(str + "<br> <br> <br> <br> <br>");
             }

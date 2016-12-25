@@ -4,19 +4,6 @@ function setup() {
 }
 
 var usercardID;
-/*var _userINFO = { useremailid: "" };
-     $.ajax({
-        url: "",
-        type: 'POST',
-        dataType: 'json',
-        contentType: 'application/json',
-        data: JSON.stringify(userINFO),
-        success: function (response) {
-		    console.log(response.cardID);
-		    }
-		
-});
-*/
 
 for (i = 1; i < 1000; i++) {
     var _cardID;

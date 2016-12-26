@@ -3,30 +3,35 @@ function setup() {
 
 }
 
-var usercardID;
+var _userID;
+var __userID;
+var userID;
 
 for (i = 1; i < 1000; i++) {
-    var _cardID;
+
     if (i < 10) {
-    _cardID = "";
+    _userID = "";
     }else if(i < 100) {
-    _cardID = "";
+    _userID = "";
     }else if(i < 1000) {
-    _cardID = "";
+    _userID = "";
     }else if(i < 2000) {
-    _cardID = "";
+    _userID = "";
     }
-    usercardID = _cardID + i;
-    var userINFO = { id: usercardID };
+    
+    userID = _userID + i;
+    
+    var __userID = { id: userID };
+    
 	    $.ajax({
             url: "",
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',
-            data: JSON.stringify(userINFO),
+            data: JSON.stringify(__userID),
             success: function(responseINFO) {
-                var str = JSON.stringify(responseINFO, null, 4);
-                document.write(str + "<br> <br>");
+                var _responseINFO = JSON.stringify(responseINFO, null, 4);
+                document.write(_responseINFO + "<br> <br>");
             }
         });
 }
